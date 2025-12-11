@@ -1,0 +1,88 @@
+const projects = [
+  {
+    slug: "swaraj-civic-os",
+    title: "Swaraj Civic OS",
+    description: "Command center for monitoring civic signals and crisis data.",
+    repo: "https://github.com/example/swaraj",
+    stack: ["Next.js", "Deck.gl", "Supabase"],
+  },
+  {
+    slug: "gesture-lens",
+    title: "Gesture Lens",
+    description: "Three.js + ML playground for controlling systems with gestures.",
+    repo: "https://github.com/example/gesture-lens",
+    stack: ["Three.js", "TensorFlow", "WebGL"],
+  },
+  {
+    slug: "ai-notes-pro",
+    title: "AI Notes Pro",
+    description: "Smart note-taking app with AI summarization & tagging.",
+    repo: "https://github.com/example/ai-notes-pro",
+    stack: ["Next.js", "OpenAI", "Tailwind"],
+  },
+  {
+    slug: "fintrack",
+    title: "FinTrack",
+    description: "Personal finance tracker with analytics dashboard.",
+    repo: "https://github.com/example/fintrack",
+    stack: ["React", "Node.js", "MongoDB"],
+  },
+  {
+    slug: "dev-portfolio",
+    title: "Developer Portfolio",
+    description: "High-performance personal portfolio with animations.",
+    repo: "https://github.com/example/dev-portfolio",
+    stack: ["Next.js", "Framer Motion", "GSAP"],
+  },
+  {
+    slug: "shopverse",
+    title: "ShopVerse",
+    description: "Full-stack e-commerce platform with Stripe payments.",
+    repo: "https://github.com/example/shopverse",
+    stack: ["Next.js", "Stripe", "PostgreSQL"],
+  },
+  {
+    slug: "codeverse-edu",
+    title: "CodeVerse EDU",
+    description: "Gamified coding platform for beginners.",
+    repo: "https://github.com/example/codeverse-edu",
+    stack: ["React", "Firebase", "Node.js"],
+  },
+  {
+    slug: "vision-ai-dashboard",
+    title: "Vision AI Dashboard",
+    description: "Computer vision dashboard for real-time video insights.",
+    repo: "https://github.com/example/vision-ai-dashboard",
+    stack: ["Python", "OpenCV", "FastAPI"],
+  },
+  {
+    slug: "crypto-pulse",
+    title: "Crypto Pulse",
+    description: "Live crypto market tracker with predictive indicators.",
+    repo: "https://github.com/example/crypto-pulse",
+    stack: ["Vue.js", "API", "Chart.js"],
+  },
+  {
+    slug: "metaverse-studio",
+    title: "Metaverse Studio",
+    description: "3D collaborative virtual workspace.",
+    repo: "https://github.com/example/metaverse-studio",
+    stack: ["Three.js", "WebSockets", "Next.js"],
+  },
+  {
+    slug: "healthsync",
+    title: "HealthSync",
+    description: "Doctor-patient health record and appointment system.",
+    repo: "https://github.com/example/healthsync",
+    stack: ["React", "Node.js", "PostgreSQL"],
+  },
+  {
+    slug: "smart-campus",
+    title: "Smart Campus",
+    description: "IoT-based campus automation and monitoring platform.",
+    repo: "https://github.com/example/smart-campus",
+    stack: ["IoT", "React", "Firebase"],
+  },
+];
+
+export default projects;

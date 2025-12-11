@@ -1,26 +1,255 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Default variables (can be overridden by themes) */
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --text-primary: #f8fafc;
+  --glass-bg: rgba(15, 23, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(to right, #6366f1, #a855f7, #ec4899);
+  --accent-gradient: linear-gradient(to right, #c084fc, #f472b6, #22d3ee);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Aurora Theme */
+[data-theme="aurora"] {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --text-primary: #f8fafc;
+  --glass-bg: rgba(15, 23, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(to right, #6366f1, #a855f7, #ec4899);
+  --accent-gradient: linear-gradient(to right, #c084fc, #f472b6, #22d3ee);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Nebula Theme */
+[data-theme="nebula"] {
+  --background: #2e1065;
+  --foreground: #faf5ff;
+  --text-primary: #faf5ff;
+  --glass-bg: rgba(46, 16, 101, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(to right, #4c1d95, #7c3aed, #db2777);
+  --accent-gradient: linear-gradient(to right, #a78bfa, #f472b6, #818cf8);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Mono Theme */
+[data-theme="mono"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --text-primary: #ededed;
+  --glass-bg: rgba(10, 10, 10, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(to right, #171717, #262626, #404040);
+  --accent-gradient: linear-gradient(to right, #ffffff, #a3a3a3, #525252);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Sunset Theme */
+[data-theme="sunset"] {
+  --background: #431407;
+  --foreground: #fff7ed;
+  --text-primary: #fff7ed;
+  --glass-bg: rgba(67, 20, 7, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(to right, #ea580c, #db2777, #7c3aed);
+  --accent-gradient: linear-gradient(to right, #fdba74, #f472b6, #c4b5fd);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Ocean Theme */
+[data-theme="ocean"] {
+  --background: #083344;
+  --foreground: #ecfeff;
+  --text-primary: #ecfeff;
+  --glass-bg: rgba(8, 51, 68, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(to right, #0891b2, #2563eb, #4f46e5);
+  --accent-gradient: linear-gradient(to right, #67e8f9, #93c5fd, #a5b4fc);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Forest Theme */
+[data-theme="forest"] {
+  --background: #052e16;
+  --foreground: #f0fdf4;
+  --text-primary: #f0fdf4;
+  --glass-bg: rgba(5, 46, 22, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(to right, #16a34a, #059669, #0d9488);
+  --accent-gradient: linear-gradient(to right, #86efac, #6ee7b7, #5eead4);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Cyberpunk Theme */
+[data-theme="cyberpunk"] {
+  --background: #000000;
+  --foreground: #facc15;
+  --text-primary: #facc15;
+  --glass-bg: rgba(0, 0, 0, 0.7);
+  --glass-border: rgba(250, 204, 21, 0.3);
+  --glass-shadow: rgba(250, 204, 21, 0.1);
+  --hero-gradient: linear-gradient(to right, #facc15, #ec4899, #3b82f6);
+  --accent-gradient: linear-gradient(to right, #fef08a, #fbcfe8, #bfdbfe);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Coffee Theme */
+[data-theme="coffee"] {
+  --background: #271c19;
+  --foreground: #fffbeb;
+  --text-primary: #fffbeb;
+  --glass-bg: rgba(39, 28, 25, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(to right, #d97706, #b45309, #78350f);
+  --accent-gradient: linear-gradient(to right, #fde68a, #fbbf24, #d97706);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Lavender Theme */
+[data-theme="lavender"] {
+  --background: #2e1065;
+  --foreground: #fae8ff;
+  --text-primary: #fae8ff;
+  --glass-bg: rgba(46, 16, 101, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(to right, #c084fc, #a855f7, #7e22ce);
+  --accent-gradient: linear-gradient(to right, #e9d5ff, #d8b4fe, #c084fc);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Midnight Theme */
+[data-theme="midnight"] {
+  --background: #020617;
+  --foreground: #e2e8f0;
+  --text-primary: #e2e8f0;
+  --glass-bg: rgba(2, 6, 23, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(to right, #1e3a8a, #1e40af, #172554);
+  --accent-gradient: linear-gradient(to right, #93c5fd, #60a5fa, #3b82f6);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Cherry Theme */
+[data-theme="cherry"] {
+  --background: #4c0519;
+  --foreground: #ffe4e6;
+  --text-primary: #ffe4e6;
+  --glass-bg: rgba(76, 5, 25, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(to right, #fb7185, #e11d48, #be123c);
+  --accent-gradient: linear-gradient(to right, #fecdd3, #fda4af, #fb7185);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Gold Theme */
+[data-theme="gold"] {
+  --background: #1a1a1a;
+  --foreground: #fef08a;
+  --text-primary: #fef08a;
+  --glass-bg: rgba(26, 26, 26, 0.6);
+  --glass-border: rgba(250, 204, 21, 0.2);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(to right, #facc15, #eab308, #a16207);
+  --accent-gradient: linear-gradient(to right, #fef9c3, #fef08a, #fde047);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Royal Theme */
+[data-theme="royal"] {
+  --background: #450a0a;
+  --foreground: #fef2f2;
+  --text-primary: #fef2f2;
+  --glass-bg: rgba(69, 10, 10, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(to right, #ef4444, #dc2626, #b91c1c);
+  --accent-gradient: linear-gradient(to right, #fecaca, #f87171, #ef4444);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Ice Theme */
+[data-theme="ice"] {
+  --background: #f0f9ff;
+  --foreground: #0c4a6e;
+  --text-primary: #0c4a6e;
+  --glass-bg: rgba(240, 249, 255, 0.6);
+  --glass-border: rgba(12, 74, 110, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.1);
+  --hero-gradient: linear-gradient(to right, #bae6fd, #7dd3fc, #38bdf8);
+  --accent-gradient: linear-gradient(to right, #0ea5e9, #0284c7, #0369a1);
+  --card-bg: rgba(255, 255, 255, 0.4);
+}
+
+/* Earth Theme */
+[data-theme="earth"] {
+  --background: #1a2e05;
+  --foreground: #ecfccb;
+  --text-primary: #ecfccb;
+  --glass-bg: rgba(26, 46, 5, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(to right, #84cc16, #65a30d, #3f6212);
+  --accent-gradient: linear-gradient(to right, #bef264, #a3e635, #84cc16);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Synthwave Theme */
+[data-theme="synthwave"] {
+  --background: #2a0a3b;
+  --foreground: #e0e7ff;
+  --text-primary: #e0e7ff;
+  --glass-bg: rgba(42, 10, 59, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(to right, #d946ef, #8b5cf6, #6366f1);
+  --accent-gradient: linear-gradient(to right, #f0abfc, #c4b5fd, #a5b4fc);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Matrix Theme */
+[data-theme="matrix"] {
+  --background: #000000;
+  --foreground: #22c55e;
+  --text-primary: #22c55e;
+  --glass-bg: rgba(0, 20, 0, 0.8);
+  --glass-border: rgba(34, 197, 94, 0.3);
+  --glass-shadow: rgba(34, 197, 94, 0.1);
+  --hero-gradient: linear-gradient(to right, #22c55e, #16a34a, #15803d);
+  --accent-gradient: linear-gradient(to right, #86efac, #4ade80, #22c55e);
+  --card-bg: rgba(0, 50, 0, 0.3);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--text-primary);
+  --color-glass: var(--glass-bg);
+  --color-glass-border: var(--glass-border);
+  --color-card: var(--card-bg);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
 }
+
+.custom-scrollbar::-webkit-scrollbar { width: 6px; } .custom-scrollbar::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); } .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 10px; } .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.4); }
